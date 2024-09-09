@@ -27,7 +27,7 @@ function HomeComp() {
 
   const FetchData = async () => {
     try {
-      const response = await axios.post("http://localhost:5000/users");
+      const response = await axios.post(`${baseAppUrl}/users`);
       if (response.status === 200) {
         setLeads(response.data); // Fetch and set leads data
       }
